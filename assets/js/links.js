@@ -1,6 +1,6 @@
 window.siteLinks = {
   email: "mailto:f.beltransilva@csun.edu",
-  cv: "assets/docs/cv.pdf",
+  cv: "assets/docs/cv_beltran_silva.pdf",
   website: "https://www.fbeltransilva.com",
   google_scholar: "https://scholar.google.com/citations?user=fbBXUpwAAAAJ&hl=en",
   orcid: "https://orcid.org/0000-0002-7999-7565",
