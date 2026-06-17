@@ -1,50 +1,90 @@
 # Francisco Beltran-Silva academic website
 
-This is a static website prepared for GitHub Pages. It uses only HTML, CSS, JavaScript, and SVG assets, so it does not need Node, Ruby, Jekyll, or a build step.
+This is a static GitHub Pages website using only HTML, CSS, and JavaScript.
 
-## Files
+## Upload to GitHub
 
-- `index.html` - homepage
-- `research.html` - publications, working papers, search filter
-- `teaching.html` - teaching profile, courses, awards, training
-- `cv.html` - web CV with print/save-as-PDF button
-- `contact.html` - contact page
-- `404.html` - custom not-found page
-- `assets/css/styles.css` - site styling
-- `assets/js/main.js` - mobile menu, search filter, email copy, current year
-- `assets/img/` - SVG placeholders and favicon
-- `.nojekyll` - tells GitHub Pages to serve files directly
-- `CNAME.example` - optional custom-domain file
+1. Unzip the website folder.
+2. Upload the contents of the folder to the repository root of your GitHub Pages repository.
+3. In GitHub, go to Settings > Pages.
+4. Choose Source: Deploy from a branch.
+5. Choose Branch: main and Folder: / (root).
+6. Save.
 
-## Edit checklist
+## Replace the profile picture
 
-1. Replace `assets/img/headshot-placeholder.svg` with a real photo, such as `assets/img/headshot.jpg`.
-2. Update the image path in `index.html` from `assets/img/headshot-placeholder.svg` to your real photo.
-3. Add paper links by replacing the `#` URLs in `research.html`.
-4. Replace `YOUR-GITHUB-USERNAME` in `sitemap.xml` with your GitHub username or custom domain.
-5. If you want `www.fbeltransilva.com` to point to GitHub Pages, rename `CNAME.example` to `CNAME` after you configure DNS.
-6. Add a PDF CV later by placing it in `assets/docs/` and linking to it from `cv.html`.
+The website currently uses:
 
-## Deploy through GitHub.com
+assets/img/profile.jpg
 
-1. Create a GitHub account or sign in.
-2. Create a new repository named `YOUR-GITHUB-USERNAME.github.io` using your exact GitHub username in lowercase.
-3. Upload all files in this folder to the repository root.
-4. Go to the repository's **Settings** tab.
-5. Click **Pages** in the left sidebar.
-6. Under **Build and deployment**, choose **Deploy from a branch**.
-7. Set the branch to `main` and the folder to `/root`, then click **Save**.
-8. After GitHub finishes publishing, open `https://YOUR-GITHUB-USERNAME.github.io`.
+To replace it, upload your preferred picture with exactly this name:
 
-## Deploy with Git on your computer
+profile.jpg
 
-```bash
-git init
-git add .
-git commit -m "Initial academic website"
-git branch -M main
-git remote add origin https://github.com/YOUR-GITHUB-USERNAME/YOUR-GITHUB-USERNAME.github.io.git
-git push -u origin main
+Place it inside:
+
+assets/img/
+
+Recommended: square image, at least 800 x 800 pixels.
+
+## Replace the CV PDF
+
+The website links to:
+
+assets/docs/cv.pdf
+
+To update the CV, upload your preferred PDF with exactly this name:
+
+cv.pdf
+
+Place it inside:
+
+assets/docs/
+
+Keeping the same filename means you do not need to edit the HTML.
+
+## Add real hyperlinks
+
+All optional public links are controlled in:
+
+assets/js/links.js
+
+Put the full URL between the quotation marks. For example:
+
+```javascript
+make_it_stick_interview: "https://example.com/interview",
 ```
 
-Then enable Pages in repository Settings as described above.
+Empty links are hidden automatically, so visitors will not see unfinished links.
+
+Useful keys include:
+
+- google_scholar
+- orcid
+- csun_profile
+- make_it_stick_interview
+- make_it_stick_book
+- make_it_stick_summary
+- stephen_chew_how_to_study
+- this_is_water_audio_transcript
+- economics_major_resource
+- music_link
+- podcast_link
+
+Research paper links also live in this file. Add journal, DOI, SSRN, or PDF links there.
+
+## Custom domain later
+
+If you want to use www.fbeltransilva.com on GitHub Pages, rename:
+
+CNAME.example
+
+to:
+
+CNAME
+
+Only do this after the DNS settings for the domain are ready.
+
+## Sitemap
+
+The sitemap currently uses fbeltransilva1.github.io. If you changed your GitHub username or use your custom domain, edit sitemap.xml and robots.txt.

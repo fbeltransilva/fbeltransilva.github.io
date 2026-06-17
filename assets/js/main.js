@@ -1,50 +1,35 @@
+
 (function () {
-  var navToggle = document.querySelector('[data-nav-toggle]');
-  var navMenu = document.querySelector('[data-nav-menu]');
+  const year = document.getElementById('current-year');
+  if (year) year.textContent = new Date().getFullYear();
 
-  if (navToggle && navMenu) {
-    navToggle.addEventListener('click', function () {
-      var isOpen = navMenu.classList.toggle('is-open');
-      navToggle.setAttribute('aria-expanded', String(isOpen));
-      document.body.classList.toggle('nav-open', isOpen);
-    });
-
-    navMenu.addEventListener('click', function (event) {
-      if (event.target.tagName === 'A') {
-        navMenu.classList.remove('is-open');
-        navToggle.setAttribute('aria-expanded', 'false');
-        document.body.classList.remove('nav-open');
-      }
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.site-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function () {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.textContent = open ? 'Close' : 'Menu';
     });
   }
 
-  var yearTargets = document.querySelectorAll('[data-current-year]');
-  yearTargets.forEach(function (target) {
-    target.textContent = new Date().getFullYear();
+  const links = window.SITE_LINKS || {};
+  document.querySelectorAll('[data-link-key]').forEach(function (el) {
+    const key = el.getAttribute('data-link-key');
+    const url = links[key];
+    if (url && typeof url === 'string' && url.trim().length > 0) {
+      el.setAttribute('href', url.trim());
+      if (!url.startsWith('mailto:')) {
+        el.setAttribute('target', '_blank');
+        el.setAttribute('rel', 'noopener noreferrer');
+      }
+      el.classList.remove('js-config-link');
+    } else {
+      el.remove();
+    }
   });
 
-  var searchInput = document.querySelector('[data-search-input]');
-  if (searchInput) {
-    searchInput.addEventListener('input', function () {
-      var query = searchInput.value.trim().toLowerCase();
-      var items = document.querySelectorAll('[data-search-item]');
-      items.forEach(function (item) {
-        var matches = item.textContent.toLowerCase().includes(query);
-        item.hidden = query.length > 0 && !matches;
-      });
-    });
-  }
-
-  var copyButton = document.querySelector('[data-copy-email]');
-  var copyStatus = document.querySelector('[data-copy-status]');
-  if (copyButton && navigator.clipboard) {
-    copyButton.addEventListener('click', function () {
-      var email = copyButton.getAttribute('data-copy-email');
-      navigator.clipboard.writeText(email).then(function () {
-        if (copyStatus) copyStatus.textContent = 'Email copied to clipboard.';
-      }).catch(function () {
-        if (copyStatus) copyStatus.textContent = 'Copy failed. Please select and copy the email manually.';
-      });
-    });
-  }
-}());
+  document.querySelectorAll('.link-list').forEach(function (list) {
+    if (list.children.length === 0) list.remove();
+  });
+})();
