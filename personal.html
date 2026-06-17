@@ -4,74 +4,41 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Personal | Francisco Beltran-Silva</title>
-  <meta name="description" content="Personal interests, music, and creative work by Francisco Beltran-Silva.">
+  <meta name="description" content="Personal and creative interests of Francisco Beltran-Silva.">
+  <meta name="author" content="Francisco Beltran-Silva">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/franco-academic-v3.css?v=3">
+  <script src="assets/js/links.js?v=3" defer></script>
+  <script src="assets/js/site.js?v=3" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="index.html">Francisco Beltran-Silva</a>
-      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a class="nav-link" href="index.html">Home</a>
-<a class="nav-link" href="research.html">Research</a>
-<a class="nav-link" href="teaching.html">Teaching</a>
-<a class="nav-link" href="students.html">Students</a>
-<a class="nav-link active" href="personal.html">Personal</a>
-<a class="nav-link" href="cv.html">CV</a>
-<a class="nav-link" href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site-header">
+  <div class="navbar">
+    <a class="brand" href="index.html">Francisco Beltran-Silva</a>
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">Menu</button>
+    <nav class="nav-links" aria-label="Main navigation"><a href="index.html">Home</a><a href="research.html">Research</a><a href="teaching.html">Teaching</a><a href="students.html">Students</a><a href="personal.html" class="active">Personal</a><a href="cv.html">CV</a><a href="contact.html">Contact</a></nav>
+  </div>
+</header>
+<main id="content">
+<div class="page-title">
+  <h1>Personal</h1>
+  <p>A little more about the interests that shape my life outside research and teaching.</p>
+</div>
 
-  <main class="page-shell">
-    
-    <aside class="profile-card" aria-label="Profile">
-      <img class="profile-photo" src="assets/img/profile.jpg" alt="Francisco Beltran-Silva">
-      <h1>Francisco Beltran-Silva</h1>
-      <p class="profile-title">Assistant Professor of Economics</p>
-      <p class="profile-affiliation">California State University, Northridge</p>
-      <p class="profile-email"><a href="mailto:f.beltransilva@csun.edu">f.beltransilva@csun.edu</a></p>
-      <div class="profile-actions">
-        <a class="button primary" href="assets/docs/cv.pdf">Download CV</a>
-        <a class="button secondary" href="contact.html">Contact</a>
-      </div>
-      <div class="icon-links" aria-label="Academic links">
-        <a class="js-config-link" data-link-key="google_scholar">Google Scholar</a>
-        <a class="js-config-link" data-link-key="orcid">ORCID</a>
-        <a class="js-config-link" data-link-key="csun_profile">CSUN profile</a>
-      </div>
-    </aside>
-    
-    <section class="content-area">
-      
-<section class="section page-intro">
-  <p class="eyebrow">Personal</p>
-  <h2>Creative me</h2>
-  <p class="lead">Outside of economics, I have a strong passion for music. I like discovering new artists and love music festivals. I mostly listen to indie music, rock, electronic music, and instrumental music.</p>
-  <p>I enjoy film scores; Hans Zimmer and Alexander Desplat are among my favorites. I play piano and am currently learning guitar and ukulele. I also enjoy composing music. Besides music, I like being physically active, especially cycling and beach volleyball.</p>
-</section>
-
-<section class="section resource-card">
-  <h2>Music and podcast</h2>
-  <p>I sometimes share music and creative projects online. I also have worked on a Spanish-language podcast that approaches the entertainment industry from an economist's perspective.</p>
-  <div class="link-list">
-    <a class="button secondary js-config-link" data-link-key="music_link">Listen to my music</a>
-    <a class="button secondary js-config-link" data-link-key="podcast_link">Podcast link</a>
+<section class="section">
+  <h2 class="section-title">Creative Me</h2>
+  <p>I have a strong passion for music. I like discovering new artists and attending music festivals. I mostly listen to indie music, rock, electronic music, and instrumental music. I also love film scores; Hans Zimmer and Alexandre Desplat are among my favorites.</p>
+  <p>I play piano and am currently learning guitar and ukulele. I also like composing music. Besides music, I like being physically active; some of my favorite activities are cycling and beach volleyball.</p>
+  <div class="button-row" style="justify-content:flex-start">
+    <a class="button" data-link-key="music" hidden>Listen to my music</a>
+    <a class="button" data-link-key="podcast" hidden>Podcast</a>
   </div>
 </section>
-
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <span>&copy; <span id="current-year"></span> Francisco Beltran-Silva</span>
-      <span>Built for GitHub Pages</span>
-    </div>
-  </footer>
-  <script src="assets/js/links.js"></script>
-  <script src="assets/js/main.js"></script>
+</main>
+<footer class="site-footer">
+  <div><strong>Francisco Beltran-Silva</strong><br>Assistant Professor of Economics, California State University, Northridge</div>
+  <div class="footer-links"><a href="mailto:f.beltransilva@csun.edu">Email</a><a href="research.html">Research</a><a href="assets/docs/cv.pdf">CV</a></div>
+</footer>
 </body>
 </html>

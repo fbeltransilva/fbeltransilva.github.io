@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://fbeltransilva1.github.io/sitemap.xml
+Sitemap: https://fbeltransilva.github.io/sitemap.xml
