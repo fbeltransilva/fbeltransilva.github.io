@@ -5,7 +5,7 @@ window.siteLinks = {
   google_scholar: "https://scholar.google.com/citations?user=fbBXUpwAAAAJ&hl=en",
   orcid: "https://orcid.org/0000-0002-7999-7565",
   linkedin: "https://www.linkedin.com/in/francisco-beltran-silva-73008449/",
-  csun_profile: "https://live-csu-northridge.pantheonsite.io/node/18188",
+  csun_profile: "https://www.csun.edu/nazarian/economics/faculty-staff/tenuredtenure-track-faculty/francisco-franco-beltran-silva",
   make_it_stick_interview: "https://www.youtube.com/watch?v=hcyEdtCiDDY",
   make_it_stick_book: "",
   make_it_stick_summary: "",
