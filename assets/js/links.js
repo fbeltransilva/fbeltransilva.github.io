@@ -21,7 +21,7 @@ window.siteLinks = {
   pub_breastfeeding: "https://pubmed.ncbi.nlm.nih.gov/38454611/",
   pub_fighting_hunger: "https://www.sciencedirect.com/science/article/pii/S0305750X23000207",
   pub_revenue_taxes: "https://doi.org/10.21919/remef.v9i2.61",
-  wp_social_media_body_image: "",
+  wp_social_media_body_image: "https://doi.org/10.1016/j.actpsy.2026.107446",
   wp_scrolling_despair: "",
   wp_sexual_behavior: "",
   wp_marijuana_mental_health: "",
