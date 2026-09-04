@@ -24,6 +24,9 @@
         .tutoring-time { color: #555; font-weight: 500; margin-top: 4px; }
         .tutoring-location { background: #e2e8f0; color: #1e293b; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
         .no-results { text-align: center; color: #64748b; padding: 40px; background: #fff; border-radius: 8px; border: 1px dashed #cbd5e1; }
+        .share-section { text-align: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid #e2e8f0; }
+        .share-section p { margin: 0 0 12px 0; font-weight: 600; color: #334155; }
+        .share-section img { border: 1px solid #cbd5e1; padding: 8px; background: #fff; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
     </style>
 </head>
 <body>
@@ -63,7 +66,6 @@
                     <li>Tutoring sessions occur in a group environment; one-on-one tutoring may occur if there are no other tutees present.</li>
                 </ul>
                 <p>Sign in and out on each visit (paper log sheets are available with the tutor)</p>
-                <p><em>Tutors have the right to decline your request for help unless you meet the requirements below for this free tutoring service.</em></p>
             </div>
         </div>
 
@@ -81,6 +83,12 @@
         </div>
 
         <div id="scheduleResults"></div>
+
+        <div class="share-section">
+            <p>Scan to view or share this schedule on a mobile device:</p>
+            <!-- Dynamically generates a QR code linking directly to your live GitHub Pages URL -->
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://fbeltransilva.github.io/tutoring.html" alt="QR Code to Economics Tutoring Schedule" width="150" height="150">
+        </div>
     </main>
 
     <footer class="site-footer">
